@@ -1,0 +1,38 @@
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}
+
+.b-checkbox {
+	padding-left: 36px;
+}
+
+	.b-checkbox__ico {
+		width: 24px;
+		height: 24px;
+		border: 2px solid #2EB670;
+		position: absolute;
+		left: 0;
+		top: -3px;
+		border-radius: 4px;
+		
+		input[type=checkbox]:focus + & {
+			box-shadow: 0 0 5px #2F2F30;
+		}
+	}
+
+	.b-checkbox__checked {
+		width: 13px;
+		height: 9px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		display: none;
+		
+		input[type=checkbox]:checked + .b-checkbox__ico & {
+			display: block;
+		}
+	}

@@ -1,0 +1,381 @@
+
+/*
+			Блок позиционирования
+*/
+
+
+/*------------------- прибивание футера к полу
+-------------------*/
+html, body {
+	background: $bg;
+	color: $main-color;
+	line-height: $line-height;
+}
+
+html, body, input, select, option {
+	font-size: $font-size;
+	font-family: $font;
+}
+
+input[type=text]::-webkit-input-placeholder	{  @include _-placeholder; }
+input[type=text]::-moz-placeholder          {  @include _-placeholder; }
+input[type=text]:-moz-placeholder           {  @include _-placeholder; }
+input[type=text]:-ms-input-placeholder     	{  @include _-placeholder; } 
+
+/* -------------- поля ввода
+---------------*/
+input[type=text] {
+	padding: 0 12px;
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 0;
+	box-shadow: none;
+	width: 100%;
+	border: 1px solid #A9ABAE; 
+	background: #fff;
+}
+
+
+/*---------------------- кнопки
+---------------------*/
+input[type=button],
+input[type=submit],
+input[type=reset],
+button {
+	text-align: center;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	white-space: nowrap;
+	border-width: 1px;
+	border-style: solid;
+	padding: 0 24px;
+	margin: 0;
+	height: 48px;
+	line-height: 46px;
+	border-radius: 8px;
+	@include _-transition(background 0.3s ease);
+}
+
+input[type=button],
+input[type=submit],
+button {
+	color: #ffffff;	
+	border-color: #2EB670;
+	background: #2EB670;
+}
+
+input[type=reset] {
+	color: #2F2F30;
+	border-color: #A9ABAE;
+	background: #fff;
+}
+
+
+
+input[type=button]:hover,
+input[type=submit]:hover,
+button:hover {
+	background: transparentize(#2EB670, .2);
+}
+
+input[type=reset]:hover {
+	color: #fff;
+	background: #A9ABAE;
+}
+
+/*--------------------- лейблы
+---------------------*/
+label {
+	position: relative;
+	cursor: pointer;
+}
+
+/*
+		END	Элементы управления
+*/
+
+
+
+img {
+	max-width: 100%;
+}
+
+a,
+use {
+	@include _-transition(all 0.3s ease);
+}
+
+a,
+a:link,
+a:visited { 
+	color: #00A651;
+	text-decoration: underline;
+}
+
+a:hover,
+a:active {
+	color: transparentize(#2EB670, .2);
+	text-decoration: underline;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+
+svg {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+}
+
+.b-line {
+	display: block;
+	clear: both;
+}
+
+	.b-line:after {
+		content: '';
+		clear: both;
+		display: table;
+		height: 0;
+	}
+	
+.b-wrap {
+	width: 1224px;
+	margin: 0 auto;
+}
+
+	.b-wrap:after {
+		content: '';
+		display: table;
+		width: 100%;
+		height: 0;
+		line-height: 0;
+	}
+	
+
+@media screen and (max-width: 1200px) {	
+	.b-wrap {
+		width: 920px;
+	}
+	
+	.b-head1 {
+		margin-bottom: 35px;
+	}
+	
+		.b-head1_main {
+			margin-bottom: 60px;
+		}
+	
+	.b-head1, 
+	h1 {
+		
+		line-height: 60px;
+	}
+	
+	.b-head2, 
+	h2 {
+		font-size: 28px;
+		line-height: 32px;
+		margin-bottom: 24px;
+	}
+	
+	blockquote {
+		
+	}
+
+	.b-head1 {
+		
+	}
+	
+	.b-wrap {
+	
+	}
+	
+	.b-footer__copyright {
+	
+	}
+	
+	.b-footer__helper { 
+		flex-basis: 350px;
+	}
+	
+}
+
+@media screen and (max-width: 959px) {
+	.b-line_submenu {
+		position: static;
+	}
+	
+	.b-head1 {
+		
+	}
+		
+		.b-head1_main {
+			margin-bottom: 40px;
+		}
+	
+	.b-wrap {
+		width: 738px;
+	}
+	
+		.b-wrap_map {
+			
+		}
+	
+	.b-head1, 
+	h1 {
+		font-size: 52px;
+		line-height: 50px;
+	}
+	
+	.b-head2, 
+	h2 {
+		margin-bottom: 14px;
+	}
+	
+	.b-head3, 
+	h3 {
+		margin-bottom: 20px;
+	}
+		
+	.b-moby-blur {
+		filter: blur(5px);
+		opacity: 0.7;
+	}
+	
+	.b-ov-hidden-moby {
+		overflow: hidden;
+	}
+	
+	.b-footer__social {
+		width: 74px;
+	}
+	
+	.b-footer__helper { 
+		flex-basis: 280px;
+	}
+	
+	ins {
+		display: inline-block;
+		width: 0.3em;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.b-head1,
+	h1 {
+		font-size: 35px;
+		line-height: 36px;
+		margin-bottom: 20px;
+	}
+	
+	.b-head2, 
+	h2 {
+		font-size: 24px;
+		line-height: 28px;
+	}
+	
+	input[type=file],
+	input[type=text],
+	input[type=email],
+	input[type=password] {
+		margin-bottom: 30px;
+	}
+	
+	
+	.b-button_small,
+	.b-button_small:link,
+	.b-button_small:visited,
+	.b-button_small:hover,
+	.b-button_small:active {
+		padding: 0 15px;
+		font-size: 12px;
+	}
+	
+	ul:not([class]) li:before {
+		
+	}
+	
+	p {
+	
+	}
+	
+	textarea {
+	
+	}
+	
+	blockquote {
+		
+	}
+	
+	.b-line_sticky {
+		/*position: fixed;
+		width: 100%;
+		padding-top: 0;
+		border: 0;
+		height: 42px;
+		background: #ed1c24;*/
+	}
+
+	.b-wrapper {
+		min-height: auto;
+	}
+	
+		.b-wrapper:after {
+			display: none;
+		}
+	
+	.b-wrap {
+		width: 100%;
+		padding: 0 15px;
+	}
+		
+	.b-footer {
+		margin-top: 0;
+		height: auto;
+	}
+	
+		.b-footer__ins {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		
+		.b-footer__helper { 
+			flex-basis: auto;
+			order: 2;
+			align-items: flex-end;
+			margin-top: 20px;
+		}
+				
+		.b-footer__social {
+			order: 1;
+		}
+			
+			.b-footer__social__inst {
+				margin-left: 16px;
+			}
+		
+		.b-footer__copyright {
+			order: 3;
+			margin-bottom: 30px;
+		}
+		
+		.b-footer__social,
+		.b-footer__tel {
+			margin-bottom: 16px;
+		}
+		
+		.b-footer__tel {
+			order: 2;
+			margin-left: 20px;
+			margin-top: 0;
+		}
+	
+}
+

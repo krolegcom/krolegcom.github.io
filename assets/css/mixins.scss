@@ -1,0 +1,28 @@
+/* класс для плейсхолдера */
+@mixin _-placeholder {
+	opacity: 0.8;
+	color: #6C6D6F;
+}
+
+@mixin _-transition($params) {
+	-webkit-transition: $params;
+	   -moz-transition: $params;
+		-ms-transition: $params;
+		 -o-transition: $params;
+			transition: $params;
+}
+
+@mixin _-webkit-transform($params) { -webkit-transform: $params; }
+@mixin _-moz-transform($params) 	{ -moz-transform: $params; }
+@mixin _-ms-transform($params) 	{ -ms-transform: $params; }
+@mixin _-o-transform($params) 		{ -o-transform: $params; }
+@mixin _-all-transform($params) 	{ transform: $params; }
+
+@mixin _-transform($params) {
+	@include _-webkit-transform($params);
+	@include _-moz-transform($params);
+	@include _-ms-transform($params);
+	@include _-o-transform($params);
+	@include _-all-transform($params);
+}
+
