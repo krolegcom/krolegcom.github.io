@@ -3,6 +3,7 @@
 .b-wrapper {
 	width: 1224px; 
 	margin: 53px auto 0;
+	position: relative;
 }
 
 
@@ -116,15 +117,20 @@
 ---------------------*/
 .b-menu {
 	width: 264px; 
-	background: $white;
-	border: 1px solid $grey1; 
-	border-radius: 8px;
 	position: sticky;
 	top: 0;
 	overflow: hidden;
+	pointer-events: none;
 }
 
-	.b-menu__list {}
+	.b-menu__sandwich { display: none; }
+
+	.b-menu__list {
+		background: $white;
+		border: 1px solid $grey1; 
+		border-radius: 8px;
+		pointer-events: auto;
+	}
 
 	.b-menu__elem {
 		position: relative;
@@ -217,12 +223,14 @@
 		.b-main-info__money__total {
 			color: $green;
 			font-size: 24px;
+			white-space: nowrap;
+			margin-right: 10px;
 		}
 		
 		.b-main-info__money__in-dollar {
 			color: $grey4;
 			font-size: $font-size;
-			margin-left: 10px;
+			white-space: nowrap;
 		}
 		
 	.b-main-info__id {
@@ -234,6 +242,15 @@
 	.b-main-info__id-value {
 		padding-right: 26px;
 		position: relative;
+		overflow: hidden;
+		input[type=text] {
+			height: 20px;
+			border: 0;
+			line-height: 20px;
+			padding: 0;
+			width: auto;
+			caret-color: transparent;
+		}
 	}
 		
 		.b-main-info__id-value__ico {
@@ -242,6 +259,7 @@
 			top: 50%; 
 			right: 0; 
 			position: absolute;
+			cursor: pointer;
 			@include _-transform(translateY(-50%)); 
 		}
 		
@@ -373,7 +391,7 @@
 		
 			.b-tabs__form__dd_input-select {
 				display: grid; 
-				grid-template-columns: 192px 1fr;
+				grid-template-columns: 1fr 80px;
 				grid-column-gap: 24px;
 			}
 
@@ -433,3 +451,4 @@
 	.b-currency[data-currency='dollar']:before { content: '$'; }
 	.b-currency[data-currency='euro']:before { content: '€'; }
 	.b-currency[data-currency='rouble']:before { content: '₽'; }
+	

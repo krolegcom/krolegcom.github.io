@@ -21,7 +21,7 @@
 	<script async src="/assets/js/scripts.js"></script>
 </head>
 <body>
-	<div class="b-wrapper"><!-- NB! комменты к закрывашкам! И сделать копирование при клике на copy. Tabindex. Для читалок. Убрать xHTML-закрывашки. Check Safari. SCSS-переменные (и trabsform). Переключение валют -->
+	<div class="b-wrapper" id="wrapper">
 		<section class="b-panel">
 			<div class="b-panel__top">
 				<h1>Donations</h1>
@@ -45,7 +45,11 @@
 		</section>
 		<div class="b-content">
 			<nav class="b-menu">
-				<ul class="b-menu__list">
+				<div class="b-menu__sandwich" id="menu__sandwich">
+					<i class="b-menu__sandwich__ico i-menu__sandwich__ico i-svg none" data-symbol="close"></i>
+					<i class="b-menu__sandwich__ico i-menu__sandwich__ico i-svg" data-symbol="sandwich"></i>
+				</div>
+				<menu class="b-menu__list" id="menu__list">
 					<li class="b-menu__elem">
 						<a href="" class="b-menu__lnk"><i class="b-menu__ico i-svg" data-symbol="menu-elem-1"></i>Change Amount</a>
 					</li>
@@ -58,7 +62,7 @@
 					<li class="b-menu__elem">
 						<a href="" class="b-menu__lnk"><i class="b-menu__ico i-svg" data-symbol="menu-elem-4"></i>Cancel Recurring</a>
 					</li>
-				</ul>
+				</menu>
 			</nav>
 			<main class="b-center-zone">
 				<section class="b-panel">
@@ -74,8 +78,8 @@
 							<div class="b-main-info__right">
 								<div class="b-main-info__id">ID</div>
 								<div class="b-main-info__id-value">
-									DYHY694Y
-									<a href="" class="b-main-info__id-value__ico i-svg" data-symbol="copy"></a>
+									<input type="text" class="i-copy-content" value="DYHY694Y" readonly size="8">
+									<span class="b-main-info__id-value__ico i-svg i-copy" data-symbol="copy"></span>
 								</div>
 							</div>
 						</div>
@@ -119,19 +123,18 @@
 									</dd>
 									<dt class="b-tabs__form__dt"><label for="">Goal</label></dt>
 									<dd class="b-tabs__form__dd b-tabs__form__dd_input-select">
-										<div class="b-currency" data-currency="dollar">
+										<div class="b-currency" id="currency-wrapper" data-currency="dollar">
 											<input type="text" tabindex="12" id="goal">
 										</div>
 										<div class="b-select">
 											<select name="currency" id="currency" tabindex="13">
-												<option value="usd">USD</option>
-												<option value="euro">EURO</option>
+												<option value="dollar">USD</option>
+												<option value="euro">EUR</option>
 												<option value="rouble">RUB</option>
 											</select>
 											<i class="i-svg b-select__arrow" data-symbol="arrow_down"></i>
 										</div>
 									</dd>
-									
 									<dt class="b-tabs__form__dt b-tabs__form__dt_start"><label>Default Amount</label></dt>
 									<dd class="b-tabs__form__dd b-tabs__form__dd_free">
 										<fieldset class="b-tabs__form__fieldset">
@@ -151,46 +154,45 @@
 										<div class="b-tabs__form__dd__slider-wrap">
 											<input type="range" id="border_size" min="0" max="5" step="1" value="2" tabindex="17">
 										</div>
-										<div class="b-tabs__form__dd__slider-info">2px</div>
+										<div class="b-tabs__form__dd__slider-info" id="border_size_val">2px</div>
 									</dd>
 									<dt class="b-tabs__form__dt"><label for="border_radius">Border radius</label></dt>
 									<dd class="b-tabs__form__dd b-tabs__form__dd_slider">
 										<div class="b-tabs__form__dd__slider-wrap">
 											<input type="range" id="border_radius" min="0" max="5" step="1" value="4" tabindex="18">
 										</div>
-										<div class="b-tabs__form__dd__slider-info">4px</div>
+										<div class="b-tabs__form__dd__slider-info" id="border_radius_val">4px</div>
 									</dd>
 								</dl>
 							</div>
 							
-							
 							<input id="appearance-tab" type="radio" name="tabs" class="b-tabs__head-radio">
 							<label for="appearance-tab" class="b-tabs__head b-tabs__head_order2">Appearance</label>
-							<div class="b-tabs__content">Content tab2</div>
-							
+							<div class="b-tabs__content">
+								Molestie sed adipiscing in in est. Aenean risus sed consectetur justo consectetur et sit cursus ipsum arcu lectus et libero, tempus pellentesque in molestie ultricies. Mauris integer amet, sed dictum. Augue non sed amet et. Dictum lacinia in sit ultricies. In adipiscing luctus dictum. Ultricies. 
+							</div>
 							
 							<input id="custom-fields-tab" type="radio" name="tabs" class="b-tabs__head-radio">
 							<label for="custom-fields-tab" class="b-tabs__head b-tabs__head_order3">Custom Fields</label>
-							<div class="b-tabs__content">Content tab3</div>
-							
+							<div class="b-tabs__content">Urna morbi vulputate orci, tortor, nulla nisi habitasse lacinia luctus pellentesque ornare hac et mattis nec ex. Urna tempus dolor leo, sit morbi habitasse urna integer nisi elit. Morbi mollis arcu tempus et. Orci, aenean dui molestie sapien dictum non mattis leo, non molestie platea dolor sit nunc tortor, est. Platea vel ornare venenatis venenati.
+							</div>
 							
 							<input id="questions-tab" type="radio" name="tabs" class="b-tabs__head-radio">
 							<label for="questions-tab" class="b-tabs__head b-tabs__head_order4">Questions</label>
-							<div class="b-tabs__content">Content tab4</div>
-							
+							<div class="b-tabs__content">Ut. Mollis aenean vel cursus sit molestie et molestie et hac dolor morbi dictumst. Molestie adipiscing malesuada amet mattis sit augue amet hac dui risus platea aenean velit amet, ex.</div>
 							
 							<input id="url-control-tab" type="radio" name="tabs" class="b-tabs__head-radio">
 							<label for="url-control-tab" class="b-tabs__head b-tabs__head_order5">URL control</label>
-							<div class="b-tabs__content">Content tab5</div>
-						</div>
-					</div>
+							<div class="b-tabs__content"> Pulvinar ornare tortor, pulvinar non tempus pellentesque molestie sapien risus ex. Ipsum arcu et integer quam, vestibulum id velit accumsan dictumst. Ipsum ut. Urna velit quis, venenatis sed malesuada imperdiet dapibus nec aenean vestibulum dictumst. Amet, libero, sed lacinia dolor sed dolor eleifend leo, consectetur ornare adipiscing tortor, risus sed imperdiet consectetur dictum. Lacinia vulputate lacinia nec imperdiet vitae in dui mattis sed eleifend imperdiet mollis non nulla in venenati.</div>
+						</div><!-- //b-tabs -->
+					</div><!-- //b-panel__top -->
 					<div class="b-panel__bottom b-panel__bottom_pink">
 						<input type="submit" value="Save changes" tabindex="100">
 						<input type="reset" value="Cancel" tabindex="101">
 					</div>
-				</form>
+				</form><!-- //b-panel -->
 			</main>
-		</div>
-	</div>
+		</div><!-- //b-content -->
+	</div><!-- //b-wrapper -->
 </body>
 </html>

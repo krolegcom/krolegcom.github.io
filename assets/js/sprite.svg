@@ -44,6 +44,15 @@
 		<path d="M11.25 6.75L6.75 11.25" stroke="#2F2F30" stroke-linecap="round" stroke-linejoin="round"/>
 		<path d="M6.75 6.75L11.25 11.25" stroke="#2F2F30" stroke-linecap="round" stroke-linejoin="round"/>
 	</symbol>
+	<symbol id="sandwich" viewBox="0 0 33 48" fill="none">
+		<path d="M1 16.0961H31.1923" stroke="#2F2F30" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M1.15173 24.0759H31.344" stroke="#2F2F30" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M1.15173 31.9039H31.344" stroke="#2F2F30" stroke-linecap="round" stroke-linejoin="round"/>
+	</symbol>
+	<symbol id="close" viewBox="0 0 32 32" fill="none">
+		<path d="M31 1L1 31" stroke-width="2"  stroke="#6C6D6F" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M1 1L31 31" stroke-width="2"  stroke="#6C6D6F" stroke-linecap="round" stroke-linejoin="round"/>
+	</symbol>
 </svg>
 
 
