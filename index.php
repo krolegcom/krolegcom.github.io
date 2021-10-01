@@ -124,7 +124,7 @@
 									<dt class="b-tabs__form__dt"><label for="">Goal</label></dt>
 									<dd class="b-tabs__form__dd b-tabs__form__dd_input-select">
 										<div class="b-currency" id="currency-wrapper" data-currency="dollar">
-											<input type="text" tabindex="12" id="goal">
+											<input type="number" step="0.01" tabindex="12" id="goal">
 										</div>
 										<div class="b-select">
 											<select name="currency" id="currency" tabindex="13">

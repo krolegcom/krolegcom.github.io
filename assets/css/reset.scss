@@ -53,8 +53,19 @@ button,
 input[type=button],
 input[type=submit],
 input[type=text],
+input[type=number],
 textarea {
 	@include _-appearance(none);
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 * {
