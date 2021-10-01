@@ -54,9 +54,7 @@ input[type=button],
 input[type=submit],
 input[type=text],
 textarea {
-	-webkit-appearance: none;
-	   -moz-appearance: none;
-			appearance: none;  
+	@include _-appearance(none);
 }
 
 * {

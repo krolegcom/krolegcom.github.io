@@ -1,7 +1,7 @@
 /* класс для плейсхолдера */
 @mixin _-placeholder {
 	opacity: 0.8;
-	color: #6C6D6F;
+	color: $grey4;
 }
 
 @mixin _-transition($params) {
@@ -26,3 +26,9 @@
 	@include _-all-transform($params);
 }
 
+@mixin _-appearance($params) {
+	-webkit-appearance: $params;
+	   -moz-appearance: $params;
+		-ms-appearance: $params;
+			appearance: $params;
+}

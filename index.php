@@ -21,7 +21,7 @@
 	<script async src="/assets/js/scripts.js"></script>
 </head>
 <body>
-	<div class="b-wrapper"><!-- NB! комменты к закрывашкам! И сделать копирование при клике на copy. Tabindex. Для читалок. Убрать xHTML-закрывашки. Check Safari. SCSS-переменные (и trabsform). Проверить соответствие макету. Переключение валют -->
+	<div class="b-wrapper"><!-- NB! комменты к закрывашкам! И сделать копирование при клике на copy. Tabindex. Для читалок. Убрать xHTML-закрывашки. Check Safari. SCSS-переменные (и trabsform). Переключение валют -->
 		<section class="b-panel">
 			<div class="b-panel__top">
 				<h1>Donations</h1>

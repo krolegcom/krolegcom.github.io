@@ -1,8 +1,5 @@
 input[type="radio"] {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
+	@include _-appearance(none);
 }
 
 .b-radio {
@@ -13,7 +10,7 @@ input[type="radio"] {
 		width: 24px;
 		height: 24px;
 		border-radius: 12px;
-		border: 1px solid #A9ABAE;
+		border: 1px solid $grey7;
 		position: absolute;
 		left: 0;
 		top: -3px;
@@ -21,7 +18,7 @@ input[type="radio"] {
 		input[type=radio]:focus + &,
 		input[type=radio]:checked + & {
 			border-width: 2px;
-			border-color: #2EB670;
+			border-color: $green-ui;
 		}
 		
 		&:after {
@@ -32,9 +29,9 @@ input[type="radio"] {
 			position: absolute;
 			left: 50%;
 			top: 50%;
-			background: #2EB670;
-			transform: translate(-50%, -50%);
+			background: $green-ui;
 			display: none;
+			@include _-transform(translate(-50%, -50%));
 		
 			input[type=radio]:checked + & {
 				display: block;

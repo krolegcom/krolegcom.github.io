@@ -5,11 +5,17 @@ $line-height: 24px;
 $font: 'Work Sans', Arial, Helvetica, sans-serif;
 $font2: 'Source Code Pro', 'Courier New', monospace;
 
-html, body {
-	background: $bg;
-	color: $main-color;
-	font-size: $font-size;
-	line-height: $line-height;
-	font-family: $font;
-	font-weight: 400;
-}
+$grey1: #DBDCDE;
+$grey2: #3E3F40;
+$grey3: #FAFAFA;
+$grey4: #6C6D6F;
+$grey5: #919293;
+$grey6: #D7D8DA;
+$grey7: #A9ABAE;
+
+$white: #fff;
+$green: #00a651;
+$green-ui: #2EB670;
+$pink: #FFFBEC;
+$blue: #6665DD;
+

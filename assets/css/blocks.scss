@@ -11,10 +11,10 @@
 .b-panel {
 	margin-bottom: 24px;
 	overflow: hidden; 
-	background: #fff; 
+	background: $white; 
 	border-radius: 8px; 
-	border: 1px solid #DBDCDE; 
-	box-shadow: 1px 3px 3px transparentize(#3E3F40, .9);
+	border: 1px solid $grey1; 
+	box-shadow: 1px 3px 3px transparentize($grey2, .9);
 }
 	
 	.b-panel__top {
@@ -22,8 +22,8 @@
 	}
 	
 	.b-panel__bottom {
-		border-top: 1px solid #DBDCDE;
-		background: #FAFAFA; 
+		border-top: 1px solid $grey1;
+		background: $grey3; 
 		padding: 15px 32px; 
 		display: flex; 
 		flex-direction: row; 
@@ -31,7 +31,7 @@
 	}
 		
 		.b-panel__bottom_pink {
-			background: #FFFBEC; 
+			background: $pink; 
 			padding-top: 23px;
 			padding-bottom: 23px;
 		}
@@ -47,18 +47,18 @@
 		position: absolute;
 		width: 18px; 
 		height: 18px; 
-		top: 50%; 
-		transform: translateY(-50%); 
+		top: 50%;
 		left: 16px;
+		@include _-transform(translateY(-50%));
 	}
 	
 	input[type=text].b-search__text,
 	.b-search__text {
 		width: 336px; 
-		border-color: #DBDCDE;
+		border-color: $grey1;
 		padding: 0 16px 0 42px;
 		&:focus {
-			border-color: #00a651;
+			border-color: $green-ui;
 		}
 	}
 	
@@ -77,9 +77,9 @@
 		z-index: 1; 
 		pointer-events: none; 
 		top: 50%; 
-		transform: translateY(-50%); 
+		@include _-transform(translateY(-50%));
 		use {
-			stroke: #6C6D6F;
+			stroke: $grey4;
 		}
 	}
 	
@@ -89,7 +89,7 @@
 			background: transparent;
 			border-color: transparent; 
 			&:focus {
-				border-color: #00a651;
+				border-color: $green-ui;
 			}
 		}
 	}
@@ -97,7 +97,7 @@
 		.b-select__arrow_light {
 			margin-top: 1px;
 			use {
-				stroke: #2F2F30;
+				stroke: $main-color;
 			}
 		}
 	
@@ -116,8 +116,8 @@
 ---------------------*/
 .b-menu {
 	width: 264px; 
-	background: #fff;
-	border: 1px solid #DBDCDE; 
+	background: $white;
+	border: 1px solid $grey1; 
 	border-radius: 8px;
 	position: sticky;
 	top: 0;
@@ -129,7 +129,7 @@
 	.b-menu__elem {
 		position: relative;
 		height: 51px;
-		border-bottom: 1px solid #DBDCDE;
+		border-bottom: 1px solid $grey1;
 	}
 		
 		.b-menu__elem:last-child {
@@ -146,13 +146,13 @@
 			height: 100%;
 			width: 100%;
 			line-height: 51px;
-			color: #2F2F30;
+			color: $main-color;
 			padding-left: 42px; 
 		}
 			
 		.b-menu__lnk:hover,
 		.b-menu__lnk:active {
-			background: #FAFAFA;
+			background: $grey3;
 		}
 		
 			.b-menu__lnk_act,
@@ -160,7 +160,7 @@
 			.b-menu__lnk_act:visited,
 			.b-menu__lnk_act:hover,
 			.b-menu__lnk_act:active {
-				background: #DBDCDE;	
+				background: $grey1;	
 				cursor: default;
 			}
 		
@@ -169,8 +169,8 @@
 		height: 18px; 
 		left: 16px; 
 		top: 50%; 
-		transform: translateY(-50%); 
 		position: absolute;
+		@include _-transform(translateY(-50%));
 	}
 		
 /*-------------------- центральная часть страницы
@@ -204,9 +204,9 @@
 			width: 18px; 
 			height: 18px; 
 			top: 50%; 
-			transform: translateY(-50%); 
 			left: 0; 
 			position: absolute;
+			@include _-transform(translateY(-50%));
 		}
 		
 	.b-main-info__money {
@@ -215,18 +215,18 @@
 	}
 	
 		.b-main-info__money__total {
-			color: #00A651;
+			color: $green;
 			font-size: 24px;
 		}
 		
 		.b-main-info__money__in-dollar {
-			color: #6C6D6F;
+			color: $grey4;
 			font-size: $font-size;
 			margin-left: 10px;
 		}
 		
 	.b-main-info__id {
-		color: #919293;
+		color: $grey5;
 		line-height: 20px;
 		margin-bottom: 4px;
 	}
@@ -240,9 +240,9 @@
 			width: 18px; 
 			height: 18px; 
 			top: 50%; 
-			transform: translateY(-50%); 
 			right: 0; 
 			position: absolute;
+			@include _-transform(translateY(-50%)); 
 		}
 		
 /*------------------- дополнительная служебная информация
@@ -254,7 +254,7 @@
 	
 	.b-service-info__elem {
 		padding: 0 32px;
-		border-left: 1px solid #D7D8DA;
+		border-left: 1px solid $grey6;
 	}
 	
 		.b-service-info__elem:first-child {
@@ -270,16 +270,16 @@
 	.b-service-info__status {
 		position: relative; 
 		padding-left: 26px; 
-		color: #00A651;
+		color: $green;
 	}
 	
 		.b-service-info__status__ico {
 			width: 18px; 
 			height: 18px; 
 			top: 50%; 
-			transform: translateY(-50%); 
 			left: 0; 
 			position: absolute;
+			@include _-transform(translateY(-50%)); 
 		}
 	
 						
@@ -301,7 +301,7 @@
 		left: 0; 
 		right: 0; 
 		height: 1px; 
-		background: #DBDCDE;
+		background: $grey1;
 	}
 
 	.b-tabs__head {
@@ -323,10 +323,7 @@
 		.b-tabs__head_order5 { order: 5; }
 	
 	.b-tabs__head-radio {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
+		@include _-appearance(none);
 	}
 	
 		.b-tabs__head-radio:checked {
@@ -334,12 +331,12 @@
 				 line-height: 46px; 
 				 border-width: 1px 1px 0;
 				 border-style: solid; 
-				 border-color: #DBDCDE; 
+				 border-color: $grey1; 
 				 border-radius: 6px 6px 0 0; 
-				 color: #00A651; 
+				 color: $green; 
 				 padding: 0 15px;
 				 margin: 0;
-				 background: #fff;
+				 background: $white;
 				 & + .b-tabs__content {
 					 display: block;
 				 }
@@ -430,7 +427,7 @@
 		position: absolute;
 		left: 12px;
 		top: 50%;
-		transform: translateY(-50%);
+		@include _-transform(translateY(-50%));
 	}
 	
 	.b-currency[data-currency='dollar']:before { content: '$'; }

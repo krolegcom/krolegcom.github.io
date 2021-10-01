@@ -1,17 +1,17 @@
-$track-color: #DBDCDE;
-$track-left-color: #2EB670;
-$thumb-color: #2EB670;
+$track-color: $grey1;
+$track-left-color: $green-ui;
+$thumb-color: $green-ui;
 
 $thumb-radius: 19px;
 $thumb-height: 19px;
 $thumb-width: 19px;
-$thumb-border-focus: #ffffff;
+$thumb-border-focus: $white;
 
 $track-width: 100%;
 $track-height: 3px;
-$track-shadow-color: #DBDCDE;
+$track-shadow-color: $grey1;
 $track-border-width: 0px;
-$track-border-color: #cfd8dc;
+$track-border-color: transparent;
 $track-radius: 3px;
 
 @mixin shadow($shadow-size, $shadow-blur, $shadow-color) {
@@ -21,8 +21,8 @@ $track-radius: 3px;
 @mixin track {
 	cursor: default;
 	height: $track-height;
-	transition: all .2s ease;
 	width: $track-width;
+	@include _-transition(all .2s ease);
 }
 
 @mixin thumb {
@@ -36,15 +36,14 @@ $track-radius: 3px;
 }
 
 [type='range'] {
-  -webkit-appearance: none;
   width: $track-width;
   background: $track-color;
   border-radius: 2px;
   height: $track-height;
   width: 100%;
   outline: none;
-  transition: background 450ms ease-in;
-  -webkit-appearance: none;
+  @include _-transition(background 0.3s ease-in);
+  @include _-appearance(none);
 
 	&::-moz-focus-outer {
 		border: 0;
@@ -72,7 +71,7 @@ $track-radius: 3px;
 
 	&::-webkit-slider-thumb {
 		@include thumb;
-		-webkit-appearance: none;
+		@include _-appearance(none);
 		margin-top: ( math.div(-$track-border-width * 2 + $track-height, 2) -  math.div($thumb-height, 2));
 	}
 	
