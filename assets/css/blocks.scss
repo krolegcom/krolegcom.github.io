@@ -1,0 +1,438 @@
+/*------------ главная обертка
+------------*/
+.b-wrapper {
+	width: 1224px; 
+	margin: 53px auto 0;
+}
+
+
+/*------------- панель с серым низом
+-------------*/
+.b-panel {
+	margin-bottom: 24px;
+	overflow: hidden; 
+	background: #fff; 
+	border-radius: 8px; 
+	border: 1px solid #DBDCDE; 
+	box-shadow: 1px 3px 3px transparentize(#3E3F40, .9);
+}
+	
+	.b-panel__top {
+		padding: 24px 32px;
+	}
+	
+	.b-panel__bottom {
+		border-top: 1px solid #DBDCDE;
+		background: #FAFAFA; 
+		padding: 15px 32px; 
+		display: flex; 
+		flex-direction: row; 
+		align-items: center;
+	}
+		
+		.b-panel__bottom_pink {
+			background: #FFFBEC; 
+			padding-top: 23px;
+			padding-bottom: 23px;
+		}
+	
+	
+/*------------------- блок поиска
+-------------------*/
+.b-search {
+	position: relative;
+}
+	
+	.b-search__ico {
+		position: absolute;
+		width: 18px; 
+		height: 18px; 
+		top: 50%; 
+		transform: translateY(-50%); 
+		left: 16px;
+	}
+	
+	input[type=text].b-search__text,
+	.b-search__text {
+		width: 336px; 
+		border-color: #DBDCDE;
+		padding: 0 16px 0 42px;
+		&:focus {
+			border-color: #00a651;
+		}
+	}
+	
+	
+/*------------------- Обертка для select
+-------------------*/				
+.b-select {
+	position: relative;
+}
+
+	.b-select__arrow  {
+		width: 10px; 
+		height: 6px;
+		position: absolute; 
+		right: 12px; 
+		z-index: 1; 
+		pointer-events: none; 
+		top: 50%; 
+		transform: translateY(-50%); 
+		use {
+			stroke: #6C6D6F;
+		}
+	}
+	
+	.b-select_light {
+		margin-left: 27px;
+		select {
+			background: transparent;
+			border-color: transparent; 
+			&:focus {
+				border-color: #00a651;
+			}
+		}
+	}
+	
+		.b-select__arrow_light {
+			margin-top: 1px;
+			use {
+				stroke: #2F2F30;
+			}
+		}
+	
+
+/*------------------- основное содержимое
+-------------------*/
+.b-content {
+	display: flex; 
+	flex-direction: row-reverse; 
+	justify-content: space-between; 
+	align-items: flex-start;
+}
+
+
+/*--------------------- меню
+---------------------*/
+.b-menu {
+	width: 264px; 
+	background: #fff;
+	border: 1px solid #DBDCDE; 
+	border-radius: 8px;
+	position: sticky;
+	top: 0;
+	overflow: hidden;
+}
+
+	.b-menu__list {}
+
+	.b-menu__elem {
+		position: relative;
+		height: 51px;
+		border-bottom: 1px solid #DBDCDE;
+	}
+		
+		.b-menu__elem:last-child {
+			border-bottom: 0;
+		}
+
+		.b-menu__lnk,
+		.b-menu__lnk:link,
+		.b-menu__lnk:visited,
+		.b-menu__lnk:hover,
+		.b-menu__lnk:active	{
+			text-decoration: none; 
+			display: block; 
+			height: 100%;
+			width: 100%;
+			line-height: 51px;
+			color: #2F2F30;
+			padding-left: 42px; 
+		}
+			
+		.b-menu__lnk:hover,
+		.b-menu__lnk:active {
+			background: #FAFAFA;
+		}
+		
+			.b-menu__lnk_act,
+			.b-menu__lnk_act:link,
+			.b-menu__lnk_act:visited,
+			.b-menu__lnk_act:hover,
+			.b-menu__lnk_act:active {
+				background: #DBDCDE;	
+				cursor: default;
+			}
+		
+	.b-menu__ico {
+		width: 18px;
+		height: 18px; 
+		left: 16px; 
+		top: 50%; 
+		transform: translateY(-50%); 
+		position: absolute;
+	}
+		
+/*-------------------- центральная часть страницы
+--------------------*/
+.b-center-zone {
+	width: 936px;
+}
+
+
+/*-------------------- основная финансовая информация
+--------------------*/
+.b-main-info {
+	display: flex; 
+	justify-content: space-between;
+}
+
+	.b-main-info__left {}
+	.b-main-info__right {
+		font-family: $font2;
+	}
+	
+	.b-main-info__head {
+		padding-left: 26px; 
+		position: relative; 
+		font-size: 14px; 
+		line-height: 20px;
+		margin-bottom: 12px;
+	}
+		
+		.b-main-info__head__ico {
+			width: 18px; 
+			height: 18px; 
+			top: 50%; 
+			transform: translateY(-50%); 
+			left: 0; 
+			position: absolute;
+		}
+		
+	.b-main-info__money {
+		font-size: 0;
+		line-height: 16px;
+	}
+	
+		.b-main-info__money__total {
+			color: #00A651;
+			font-size: 24px;
+		}
+		
+		.b-main-info__money__in-dollar {
+			color: #6C6D6F;
+			font-size: $font-size;
+			margin-left: 10px;
+		}
+		
+	.b-main-info__id {
+		color: #919293;
+		line-height: 20px;
+		margin-bottom: 4px;
+	}
+	
+	.b-main-info__id-value {
+		padding-right: 26px;
+		position: relative;
+	}
+		
+		.b-main-info__id-value__ico {
+			width: 18px; 
+			height: 18px; 
+			top: 50%; 
+			transform: translateY(-50%); 
+			right: 0; 
+			position: absolute;
+		}
+		
+/*------------------- дополнительная служебная информация
+-------------------*/
+.b-service-info {
+	display: flex;
+	flex-direction: row;
+}
+	
+	.b-service-info__elem {
+		padding: 0 32px;
+		border-left: 1px solid #D7D8DA;
+	}
+	
+		.b-service-info__elem:first-child {
+			border-left: 0;
+			padding-left: 0;
+		}
+		
+	.b-service-info__head {
+		font-size: 14px;
+		 line-height: 20px;
+	}
+	
+	.b-service-info__status {
+		position: relative; 
+		padding-left: 26px; 
+		color: #00A651;
+	}
+	
+		.b-service-info__status__ico {
+			width: 18px; 
+			height: 18px; 
+			top: 50%; 
+			transform: translateY(-50%); 
+			left: 0; 
+			position: absolute;
+		}
+	
+						
+/*-------------------- Табы
+--------------------*/
+.b-tabs {
+	padding: 0 24px 0; 
+	display: flex; 
+	flex-direction: row; 
+	flex-wrap: wrap; 
+	margin: 8px -32px 0; 
+	position: relative;
+}
+
+	.b-tabs:before {
+		content: '';
+		position: absolute; 
+		top: 45px; 
+		left: 0; 
+		right: 0; 
+		height: 1px; 
+		background: #DBDCDE;
+	}
+
+	.b-tabs__head {
+		z-index: 1;   
+		height: 46px; 
+		line-height: 48px; 
+		margin: 0 16px; 
+		font-weight: 600; 
+		letter-spacing: 0.03em; 
+		text-transform: uppercase; 
+		font-size: 12px; 
+		cursor: pointer;
+	}
+		
+		.b-tabs__head_order1 { order: 1; }
+		.b-tabs__head_order2 { order: 2; }
+		.b-tabs__head_order3 { order: 3; }
+		.b-tabs__head_order4 { order: 4; }
+		.b-tabs__head_order5 { order: 5; }
+	
+	.b-tabs__head-radio {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+	}
+	
+		.b-tabs__head-radio:checked {
+			& + .b-tabs__head {
+				 line-height: 46px; 
+				 border-width: 1px 1px 0;
+				 border-style: solid; 
+				 border-color: #DBDCDE; 
+				 border-radius: 6px 6px 0 0; 
+				 color: #00A651; 
+				 padding: 0 15px;
+				 margin: 0;
+				 background: #fff;
+				 & + .b-tabs__content {
+					 display: block;
+				 }
+			}
+		}
+		
+	.b-tabs__content {
+		display: none;
+		z-index: 1; 
+		order: 10; 
+		width: 100%; 
+		padding: 40px 0 16px;
+	}
+	
+	.b-tabs__form {
+		display: inline-grid; 
+		grid-template-columns: 160px minmax(auto, 296px); 
+		grid-column-gap: 16px;
+		grid-row-gap: 24px; 
+	}
+	
+		.b-tabs__form__dt {
+			text-align: right;
+			align-self: center;
+			display: flex;
+			justify-content: flex-end;
+		}
+		
+			.b-tabs__form__dt_start {
+				align-self: flex-start;
+			}
+		
+		.b-tabs__form__dd {}
+		
+			.b-tabs__form__dd_input-select {
+				display: grid; 
+				grid-template-columns: 192px 1fr;
+				grid-column-gap: 24px;
+			}
+
+			.b-tabs__form__dd_slider {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			
+			.b-tabs__form__dd_free {
+				margin-bottom: 9px;
+			}
+			
+			.b-tabs__form__dd__slider-info {
+				margin-left: 16px;
+			}
+			
+			.b-tabs__form__dd__checkbox-wrap {
+				clear: both;
+				white-space: nowrap;
+			}
+			
+			.b-tabs__form__dd__slider-wrap {
+				width: 218px;
+				top: -2px;
+				position: relative;
+			}
+			
+		.b-tabs__form__fieldset {
+			margin-bottom: 24px;
+		}
+		
+		.b-tabs__form__radio-wrap {
+			clear: both;
+			& + & {
+				margin-top: 16px;
+			}
+		}
+
+/*-------------- обертка для валюты в инпуте
+--------------*/
+.b-currency {
+	position: relative;
+	input[type=text] {
+		padding-left: 23px ;
+	}	
+}
+
+	.b-currency:before {
+		content: '';
+		position: absolute;
+		left: 12px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	.b-currency[data-currency='dollar']:before { content: '$'; }
+	.b-currency[data-currency='euro']:before { content: '€'; }
+	.b-currency[data-currency='rouble']:before { content: '₽'; }

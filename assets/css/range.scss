@@ -5,6 +5,7 @@ $thumb-color: #2EB670;
 $thumb-radius: 19px;
 $thumb-height: 19px;
 $thumb-width: 19px;
+$thumb-border-focus: #ffffff;
 
 $track-width: 100%;
 $track-height: 3px;
@@ -38,9 +39,9 @@ $track-radius: 3px;
   -webkit-appearance: none;
   width: $track-width;
   background: $track-color;
-  border-radius: 8px;
+  border-radius: 2px;
   height: $track-height;
-  width: 356px;
+  width: 100%;
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
@@ -73,7 +74,10 @@ $track-radius: 3px;
 		@include thumb;
 		-webkit-appearance: none;
 		margin-top: ( math.div(-$track-border-width * 2 + $track-height, 2) -  math.div($thumb-height, 2));
-		
+	}
+	
+	&:focus::-webkit-slider-thumb {
+		border: 1px solid $thumb-border-focus;
 	}
 
 	&::-moz-range-track {
@@ -89,6 +93,9 @@ $track-radius: 3px;
 
 	&::-moz-range-thumb {
 		@include thumb;
+	}
+	&:focus::-moz-range-thumb {
+		border: 1px solid $thumb-border-focus;
 	}
 
 	&::-ms-track {

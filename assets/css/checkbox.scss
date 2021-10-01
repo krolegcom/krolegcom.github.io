@@ -12,27 +12,29 @@ input[type="checkbox"] {
 	.b-checkbox__ico {
 		width: 24px;
 		height: 24px;
-		border: 2px solid #2EB670;
+		border: 1px solid #A9ABAE;
 		position: absolute;
 		left: 0;
 		top: -3px;
 		border-radius: 4px;
 		
-		input[type=checkbox]:focus + & {
-			box-shadow: 0 0 5px #2F2F30;
+		input[type=checkbox]:focus + &,
+		input[type=checkbox]:checked + & {
+			border-width: 2px;
+			border-color: #2EB670;
+		}
+		
+		svg {
+			width: 13px;
+			height: 9px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			display: none;
+			input[type=checkbox]:checked + & {
+				display: block;
+			}
 		}
 	}
 
-	.b-checkbox__checked {
-		width: 13px;
-		height: 9px;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		display: none;
-		
-		input[type=checkbox]:checked + .b-checkbox__ico & {
-			display: block;
-		}
-	}
